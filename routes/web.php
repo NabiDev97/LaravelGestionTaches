@@ -14,8 +14,9 @@ use App\Http\Controllers\TacheController;
 |
 */
 
+Route::get('/delete-tache/{id}', [TacheController::class, 'delete_tache']);
+ Route::post('/update/traitement', [TacheController::class, 'update_tache_traitement']);
+ Route::get('/update-tache/{id}', [TacheController::class, 'update_tache']);
  Route::get('/tache', [TacheController::class, 'lister_tache']);
  Route::get('/ajouter',[TacheController::class, 'ajouter_tache']);
  Route::post('/ajouter/traitement', [TacheController::class, 'ajouter_tache_traitement']);
-
-

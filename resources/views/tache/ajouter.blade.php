@@ -21,8 +21,9 @@
     
    <div class="row">
    <form method="post" action="/ajouter/traitement">
-    @csrf
+   
     @method('POST')
+    @csrf
    <div class="mb-3">
         <label for="name" class="form-label">Nom:</label>
         <input type="text" class="form-control" id="name" name="name">
@@ -33,6 +34,8 @@
     </div>
     <button type="submit" class="btn btn-primary">Ajouter</button>
 </form>
+<br>
+<a href="/tache" class="btn btn-primary mt-2">Lister les taches</a>
 
     </div>
    </div>

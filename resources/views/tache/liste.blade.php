@@ -13,6 +13,11 @@
    <div class="row">
         <div class="col s12">
             <h1>La liste des taches</h1>
+            @if (session('status'))
+        <div class="alert alert-success">
+            {{session('status')}}
+        </div>
+   @endif
             <hr>
             <a href="/ajouter" class="btn btn-info">Ajouter une tache</a><hr>
             
@@ -35,9 +40,9 @@
                         <td>{{$tache->created_at}}</td>
                         <td>{{$tache->updated_at}}</td>
                         <td>
-                        <a href="#" class="btn btn-success">Modifier</a>
+                        <a href="/update-tache/{{$tache->id}}" class="btn btn-success">Modifier</a>
 
-                            <a href="#" class="btn btn-danger">Supprimer</a>
+                            <a href="/delete-tache/{{$tache->id}}" class="btn btn-danger">Supprimer</a>
                         </td>
                     </tr>
                 @endforeach
