@@ -28,17 +28,19 @@
                 </thead>
                 <tbody>
                 
+                @foreach($taches as $tache)
                     <tr>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
+                        <td>{{$tache->name}}</td>
+                        <td>{{$tache->description}}</td>
+                        <td>{{$tache->created_at}}</td>
+                        <td>{{$tache->updated_at}}</td>
                         <td>
                         <a href="#" class="btn btn-success">Modifier</a>
 
                             <a href="#" class="btn btn-danger">Supprimer</a>
                         </td>
                     </tr>
+                @endforeach
                 </tbody>
             </table>
         </div>

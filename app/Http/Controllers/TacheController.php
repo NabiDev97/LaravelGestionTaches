@@ -9,7 +9,8 @@ use App\Models\tache;
 class TacheController extends Controller
 {
     public function lister_tache(){
-        return view('tache.liste');
+        $taches=Tache::all();
+        return view('tache.liste',compact('taches'));
     }
     public function ajouter_tache(){
         return view('tache.ajouter');

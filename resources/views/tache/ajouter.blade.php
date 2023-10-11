@@ -15,6 +15,10 @@
             {{session('status')}}
         </div>
    @endif
+   @foreach($errors->all() as $error)
+   <div class="alert alert-danger">{{$error}}</div>
+   @endforeach
+    
    <div class="row">
    <form method="post" action="/ajouter/traitement">
     @csrf
